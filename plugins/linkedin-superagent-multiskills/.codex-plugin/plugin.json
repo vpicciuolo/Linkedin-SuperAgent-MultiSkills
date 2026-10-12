@@ -1,0 +1,31 @@
+{
+  "name": "linkedin-superagent-multiskills",
+  "version": "2.0.0",
+  "description": "OYYO ONE AI's free, open-source LinkedIn multi-skill agent for strategy, authentic content, engagement, profiles, campaigns, and local analytics.",
+  "author": {
+    "name": "Vincenzo Picciuolo, HRN Innovation Technologies Ltd",
+    "url": "https://github.com/vpicciuolo/"
+  },
+  "homepage": "https://oyyo.one",
+  "repository": "https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills",
+  "license": "MIT",
+  "keywords": ["linkedin", "agent-skills", "content", "analytics", "humanizer", "oyyo-one"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OYYO LinkedIn SuperAgent",
+    "shortDescription": "LinkedIn strategy, writing and analytics",
+    "longDescription": "Plan, write, review, repurpose, and analyze LinkedIn content with reusable voice memory, approval gates, local-first tools, and focused workflows for creators, founders, sales teams, recruiters, and employee advocacy programs.",
+    "developerName": "Vincenzo Picciuolo · HRN Innovation Technologies Ltd",
+    "category": "Productivity",
+    "capabilities": ["Strategy", "Writing", "Analytics", "Local tools"],
+    "websiteURL": "https://oyyo.one",
+    "defaultPrompt": [
+      "Set up my OYYO LinkedIn workspace.",
+      "Turn this idea into a LinkedIn post in my voice.",
+      "Analyze my LinkedIn content export."
+    ],
+    "brandColor": "#6D5EF7",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

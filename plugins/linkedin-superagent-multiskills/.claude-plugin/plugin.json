@@ -1,0 +1,13 @@
+{
+  "name": "linkedin-superagent-multiskills",
+  "version": "2.0.0",
+  "description": "OYYO ONE AI's draft-first LinkedIn strategy, content, engagement, profile, campaign, and analytics skill pack.",
+  "author": {
+    "name": "Vincenzo Picciuolo, HRN Innovation Technologies Ltd",
+    "url": "https://github.com/vpicciuolo/"
+  },
+  "homepage": "https://oyyo.one",
+  "repository": "https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills",
+  "license": "MIT",
+  "keywords": ["linkedin", "content", "writing", "analytics", "humanizer", "oyyo-one"]
+}

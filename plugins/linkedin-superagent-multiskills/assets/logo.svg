@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
+  <title id="title">OYYO ONE AI LinkedIn SuperAgent MultiSkills</title>
+  <desc id="desc">OYYO ONE AI branding with the LinkedIn SuperAgent MultiSkills name.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C6CFF"/>
+      <stop offset="1" stop-color="#00C2A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="220" rx="32" fill="#0B1020"/>
+  <rect x="34" y="34" width="152" height="152" rx="36" fill="url(#g)"/>
+  <path d="M65 76h30l15 26 15-26h30l-29 49v35H94v-35z" fill="#fff"/>
+  <text x="222" y="82" fill="#AFA8FF" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="5">OYYO ONE AI</text>
+  <text x="222" y="129" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="800">LinkedIn SuperAgent</text>
+  <text x="222" y="168" fill="#91A0BA" font-family="Arial, sans-serif" font-size="25">MultiSkills · Open source · Local first</text>
+</svg>

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Set up OYYO LinkedIn"
+  short_description: "Initialize a private local LinkedIn workspace"
+  brand_color: "#6D5EF7"
+  default_prompt: "Use $oyyo-linkedin-setup to initialize my local LinkedIn workspace."
+policy:
+  allow_implicit_invocation: true

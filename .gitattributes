@@ -1,0 +1,11 @@
+* text=auto
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+*.csv text eol=lf
+*.svg text eol=lf
+VERSION text eol=lf
+LICENSE text eol=lf
+NOTICE text eol=lf

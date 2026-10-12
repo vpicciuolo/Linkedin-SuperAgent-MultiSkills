@@ -1,0 +1,13 @@
+.oyyo-linkedin/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.tmp/
+.coverage
+dist/
+build/
+*.egg-info/
+.DS_Store
+Thumbs.db
+.env
+*.local

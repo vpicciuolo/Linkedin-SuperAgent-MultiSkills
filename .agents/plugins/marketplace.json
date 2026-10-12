@@ -1,0 +1,20 @@
+{
+  "name": "oyyo-one-open-source",
+  "interface": {
+    "displayName": "OYYO ONE Open Source"
+  },
+  "plugins": [
+    {
+      "name": "linkedin-superagent-multiskills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/linkedin-superagent-multiskills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "linkedin-superagent-multiskills",
+  "version": "2.0.0",
+  "description": "OYYO ONE AI's free, open-source LinkedIn multi-skill agent for strategy, authentic content, engagement, profiles, campaigns, and local analytics.",
+  "author": {
+    "name": "Vincenzo Picciuolo, HRN Innovation Technologies Ltd",
+    "url": "https://github.com/vpicciuolo/"
+  },
+  "homepage": "https://oyyo.one",
+  "repository": "https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills",
+  "license": "MIT",
+  "keywords": [
+    "linkedin-agent",
+    "linkedin-ai",
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "personal-branding",
+    "content-marketing",
+    "linkedin-content",
+    "humanizer",
+    "oyyo-one"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/oyyo-linkedin-setup/SKILL.md"
+    }
+  }
+}

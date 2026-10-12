@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">OYYO LinkedIn SuperAgent icon</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D5EF7"/>
+      <stop offset="1" stop-color="#00C2A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#0B1020"/>
+  <path d="M24 34h20l20 30 20-30h20L73 79v23H55V79z" fill="url(#g)"/>
+  <circle cx="101" cy="27" r="8" fill="#FFCD4A"/>
+</svg>
