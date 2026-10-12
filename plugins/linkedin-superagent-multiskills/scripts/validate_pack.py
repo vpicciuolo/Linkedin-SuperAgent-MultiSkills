@@ -50,8 +50,8 @@ def validate() -> list[str]:
     skills_root = PLUGIN_ROOT / "skills"
     names: set[str] = set()
     skill_files = sorted(skills_root.glob("*/SKILL.md"))
-    if len(skill_files) < 24:
-        errors.append(f"expected at least 24 skills, found {len(skill_files)}")
+    if len(skill_files) != 24:
+        errors.append(f"expected exactly 24 skills, found {len(skill_files)}")
 
     for path in skill_files:
         try:
@@ -86,6 +86,18 @@ def validate() -> list[str]:
     ):
         if not (PLUGIN_ROOT / "references" / reference).is_file():
             errors.append(f"missing reference: {reference}")
+
+    for script in ("build_distribution.py", "install_skills.py"):
+        if not (PLUGIN_ROOT / "scripts" / script).is_file():
+            errors.append(f"missing distribution script: {script}")
+
+    for portable_file in (
+        REPO_ROOT / "portable" / "CHATGPT_INSTRUCTIONS.md",
+        REPO_ROOT / "portable" / "OYYO_LINKEDIN_SUPERAGENT.md",
+        REPO_ROOT / "docs" / "INSTALL_EVERYWHERE.md",
+    ):
+        if not portable_file.is_file():
+            errors.append(f"missing portability document: {portable_file.relative_to(REPO_ROOT)}")
 
     for path in PLUGIN_ROOT.rglob("*"):
         if path.is_symlink():

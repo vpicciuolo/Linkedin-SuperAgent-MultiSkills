@@ -2,6 +2,25 @@
 
 All notable changes follow Semantic Versioning.
 
+## 2.2.0 - 2026-10-12
+
+- Removed logo artwork and image badges from the README and aligned its
+  structure, navigation, ecosystem links, ownership language, and release
+  information with the other public repositories maintained by Vincenzo
+  Picciuolo.
+- Added a complete self-contained Markdown agent for ChatGPT, Claude,
+  Perplexity, Gemini, local models, and other file-aware AI workspaces.
+- Added compact ChatGPT/web instructions and a detailed cross-platform install
+  guide covering local, offline, web, plugin, skill, and hosted-agent use.
+- Added a zero-dependency offline installer for all 24 independent skills.
+- Added a reproducible distribution builder for the portable Markdown agent
+  and single-folder plugin ZIP.
+- Added release automation that validates the pack and publishes both portable
+  artifacts for every version tag.
+- Added distribution and installation tests and expanded pack validation to
+  cover the new portable files and scripts.
+- Added the project to the `vpicciuolo` profile README.
+
 ## 2.1.0 - 2026-10-12
 
 - Added manual, automatic browser-assisted, and official API operating modes.

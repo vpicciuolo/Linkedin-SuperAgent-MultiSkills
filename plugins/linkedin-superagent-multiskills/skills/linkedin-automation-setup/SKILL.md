@@ -3,7 +3,7 @@ name: linkedin-automation-setup
 description: Configure manual, automatic browser, or official API operation for OYYO LinkedIn. Use when the user asks for automation, account access, permissions, a worker connection, API setup, or a change of operating mode.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 COPYRIGHT = "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 PROJECT_URL = "https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills"
 SUPPORT_URL = "https://hrn.ae/githubsupport"

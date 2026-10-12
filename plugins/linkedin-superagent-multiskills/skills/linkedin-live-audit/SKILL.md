@@ -3,7 +3,7 @@ name: linkedin-live-audit
 description: Audit the current LinkedIn account, recent posts, publishing times, profile completeness, engagement, and unattended work. Use when the user asks what is happening now, what needs attention, when to post, or for a live account review.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

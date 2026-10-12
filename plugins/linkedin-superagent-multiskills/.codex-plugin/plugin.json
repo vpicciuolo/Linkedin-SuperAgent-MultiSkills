@@ -1,7 +1,7 @@
 {
   "name": "linkedin-superagent-multiskills",
-  "version": "2.1.0",
-  "description": "OYYO ONE AI's free, open-source LinkedIn multi-skill agent with manual, browser-assisted, and official API operating modes.",
+  "version": "2.2.0",
+  "description": "OYYO ONE AI's free, open-source and portable LinkedIn multi-skill agent for offline, local, web, browser-assisted, and official API workflows.",
   "author": {
     "name": "Vincenzo Picciuolo, HRN Innovation Technologies Ltd",
     "url": "https://github.com/vpicciuolo/"
@@ -9,7 +9,7 @@
   "homepage": "https://oyyo.one",
   "repository": "https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills",
   "license": "MIT",
-  "keywords": ["linkedin", "agent-skills", "content", "analytics", "humanizer", "oyyo-one"],
+  "keywords": ["linkedin", "agent-skills", "content", "analytics", "offline-ai", "chatgpt", "local-ai", "humanizer", "oyyo-one"],
   "skills": "./skills/",
   "interface": {
     "displayName": "OYYO LinkedIn SuperAgent",

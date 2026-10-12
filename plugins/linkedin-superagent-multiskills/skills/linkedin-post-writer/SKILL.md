@@ -3,7 +3,7 @@ name: linkedin-post-writer
 description: Draft, revise, or review a LinkedIn feed post in the user's voice. Use for text posts, post ideas, launch posts, founder updates, educational posts, opinions, stories, offers, or a pasted draft that needs improvement.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

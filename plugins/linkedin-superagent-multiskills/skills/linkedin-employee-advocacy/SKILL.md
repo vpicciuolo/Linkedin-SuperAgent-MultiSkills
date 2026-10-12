@@ -3,7 +3,7 @@ name: linkedin-employee-advocacy
 description: Design and operate an ethical LinkedIn employee advocacy program. Use when a company wants employees to post, share expertise, support a launch, build employer brand, or measure team participation without turning people into identical brand accounts.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

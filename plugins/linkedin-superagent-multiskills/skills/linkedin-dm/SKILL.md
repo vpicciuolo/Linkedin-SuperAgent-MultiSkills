@@ -3,7 +3,7 @@ name: linkedin-dm
 description: Draft personalized, ethical LinkedIn connection notes and one-to-one messages. Use for a specific person, referral request, partnership note, recruiter response, warm sales outreach, follow-up, or inbox reply. Do not use for bulk or deceptive automation.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "linkedin-superagent-multiskills",
-      "description": "A 24-skill LinkedIn agent with manual, browser-assisted, and official API modes for strategy, content, account operations, and analytics.",
+      "description": "A portable 24-skill LinkedIn agent for offline, local, web, browser-assisted, and official API workflows across strategy, content, account operations, and analytics.",
       "source": "./plugins/linkedin-superagent-multiskills",
       "category": "productivity",
       "homepage": "https://oyyo.one"

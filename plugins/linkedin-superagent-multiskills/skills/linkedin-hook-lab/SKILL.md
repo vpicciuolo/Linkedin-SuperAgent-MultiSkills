@@ -3,7 +3,7 @@ name: linkedin-hook-lab
 description: Generate, diagnose, and improve LinkedIn opening lines while keeping the post's promise honest. Use when the user asks for hooks, first lines, a stronger opening, A/B variants, or why a draft fails before the fold.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

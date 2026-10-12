@@ -3,7 +3,7 @@ name: linkedin-worker
 description: Run an ongoing LinkedIn work queue across audit, content, engagement, profile, inbox, page, and analytics tasks. Use when the user asks the agent to operate independently, manage the account, execute a recurring work session, or process several approved actions.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

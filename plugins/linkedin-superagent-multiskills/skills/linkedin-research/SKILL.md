@@ -3,7 +3,7 @@ name: linkedin-research
 description: Research a current topic for a LinkedIn post and produce an evidence-backed angle brief. Use when the user needs facts, trends, examples, competitor context, citations, or wants to respond to recent news. Do not use for purely personal-story posts.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

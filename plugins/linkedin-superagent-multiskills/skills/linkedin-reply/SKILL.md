@@ -3,7 +3,7 @@ name: linkedin-reply
 description: Draft replies to LinkedIn comments, including a whole comment thread. Use when the user wants to answer a commenter, handle feedback, respond to criticism, continue a warm conversation, or clear replies under their post.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

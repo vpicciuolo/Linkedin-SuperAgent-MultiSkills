@@ -3,7 +3,7 @@ name: linkedin-comment
 description: Draft a substantive top-level comment on someone else's LinkedIn post. Use when the user pastes a post or URL and asks to comment, engage, add a view, disagree respectfully, or join the conversation. Do not use for replies to existing comments.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

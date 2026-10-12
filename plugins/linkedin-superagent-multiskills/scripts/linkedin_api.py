@@ -19,7 +19,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 API_ROOT = "https://api.linkedin.com"
 TOKEN_ENV = "LINKEDIN_ACCESS_TOKEN"
 ACTOR_ENV = "LINKEDIN_ACTOR_URN"

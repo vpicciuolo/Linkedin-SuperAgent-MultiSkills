@@ -3,7 +3,7 @@ name: linkedin-account-manager
 description: Review, prepare, and manage approved changes across a LinkedIn member profile or company page. Use for headline, About, Experience, Featured, skills, page details, content, comments, inbox, connections, and account housekeeping.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

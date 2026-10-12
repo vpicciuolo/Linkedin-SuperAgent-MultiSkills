@@ -3,7 +3,7 @@ name: linkedin-carousel
 description: Design the narrative and copy for a LinkedIn document post or carousel. Use for slide-by-slide content, visual frameworks, checklists, case studies, before/after sequences, or turning a dense idea into a downloadable PDF concept.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

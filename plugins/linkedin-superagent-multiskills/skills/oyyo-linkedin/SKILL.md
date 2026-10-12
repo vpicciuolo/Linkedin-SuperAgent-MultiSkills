@@ -3,7 +3,7 @@ name: oyyo-linkedin
 description: Route an end-to-end LinkedIn request to the right OYYO ONE AI workflow. Use for broad LinkedIn goals, multi-step projects, or when the user asks what this pack can do. For a single clear task, use the focused skill directly.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

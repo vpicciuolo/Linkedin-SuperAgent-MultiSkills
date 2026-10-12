@@ -3,7 +3,7 @@ name: oyyo-linkedin-setup
 description: Initialize or repair the local OYYO LinkedIn workspace and explain installation. Use when the user asks to install, configure, onboard, create local state, or check whether the pack is ready.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

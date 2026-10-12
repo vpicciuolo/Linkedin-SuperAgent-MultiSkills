@@ -3,7 +3,7 @@ name: linkedin-strategy
 description: Create or revise a LinkedIn positioning and content strategy. Use for audience definition, personal brand positioning, content pillars, goals, format mix, cadence, measurement, or a 30/60/90-day plan.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 
