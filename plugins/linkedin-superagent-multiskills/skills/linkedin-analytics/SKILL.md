@@ -3,7 +3,7 @@ name: linkedin-analytics
 description: Analyze a LinkedIn content export or pasted performance table, compare normalized metrics, find patterns, and recommend experiments. Use for CSV analytics, post performance, content audits, monthly reviews, or deciding what to repeat and stop.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

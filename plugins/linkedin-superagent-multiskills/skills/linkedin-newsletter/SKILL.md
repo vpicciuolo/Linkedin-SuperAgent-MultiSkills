@@ -3,7 +3,7 @@ name: linkedin-newsletter
 description: Plan, draft, or edit a LinkedIn newsletter article or long-form post. Use for recurring editorial series, articles, deep explanations, issue outlines, subscriber welcome copy, or turning researched material into long-form content.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

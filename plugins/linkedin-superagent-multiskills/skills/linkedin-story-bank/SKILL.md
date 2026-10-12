@@ -3,7 +3,7 @@ name: linkedin-story-bank
 description: Interview the user for concrete, truthful LinkedIn content material and maintain a story bank. Use when they have no ideas, want an interview, or need personal examples, proof, lessons, decisions, and failures to write from.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

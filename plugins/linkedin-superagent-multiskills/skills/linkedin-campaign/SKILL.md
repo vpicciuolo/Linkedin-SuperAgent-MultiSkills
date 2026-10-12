@@ -3,7 +3,7 @@ name: linkedin-campaign
 description: Plan a coordinated LinkedIn launch, event, hiring, report, webinar, product, or thought-leadership campaign. Use when multiple posts and formats must work together over time with owners, assets, and measurement.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

@@ -50,8 +50,8 @@ def validate() -> list[str]:
     skills_root = PLUGIN_ROOT / "skills"
     names: set[str] = set()
     skill_files = sorted(skills_root.glob("*/SKILL.md"))
-    if len(skill_files) < 20:
-        errors.append(f"expected at least 20 skills, found {len(skill_files)}")
+    if len(skill_files) < 24:
+        errors.append(f"expected at least 24 skills, found {len(skill_files)}")
 
     for path in skill_files:
         try:
@@ -82,6 +82,7 @@ def validate() -> list[str]:
         "hook-library.md",
         "profile-rubric.md",
         "analytics-schema.md",
+        "automation-modes.md",
     ):
         if not (PLUGIN_ROOT / "references" / reference).is_file():
             errors.append(f"missing reference: {reference}")

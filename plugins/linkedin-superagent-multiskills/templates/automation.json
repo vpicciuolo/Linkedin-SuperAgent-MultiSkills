@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "mode": "manual",
+  "scope": "read",
+  "account_label": "",
+  "automatic": {
+    "risk_acknowledged": false,
+    "user_sign_in_required": true
+  },
+  "api": {
+    "provider": "linkedin_official",
+    "token_environment_variable": "LINKEDIN_ACCESS_TOKEN",
+    "actor_urn_environment_variable": "LINKEDIN_ACTOR_URN",
+    "version_environment_variable": "LINKEDIN_VERSION",
+    "granted_scopes": []
+  },
+  "approvals": {
+    "live_reads": "session",
+    "writes": "per_action",
+    "destructive_actions": "per_action"
+  }
+}

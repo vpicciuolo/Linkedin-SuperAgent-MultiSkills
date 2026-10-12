@@ -1,7 +1,7 @@
 {
   "name": "linkedin-superagent-multiskills",
-  "version": "2.0.0",
-  "description": "OYYO ONE AI's free, open-source LinkedIn multi-skill agent for strategy, authentic content, engagement, profiles, campaigns, and local analytics.",
+  "version": "2.1.0",
+  "description": "OYYO ONE AI's free, open-source LinkedIn multi-skill agent with manual, browser-assisted, and official API operating modes.",
   "author": {
     "name": "Vincenzo Picciuolo, HRN Innovation Technologies Ltd",
     "url": "https://github.com/vpicciuolo/"
@@ -13,16 +13,17 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "OYYO LinkedIn SuperAgent",
-    "shortDescription": "LinkedIn strategy, writing and analytics",
-    "longDescription": "Plan, write, review, repurpose, and analyze LinkedIn content with reusable voice memory, approval gates, local-first tools, and focused workflows for creators, founders, sales teams, recruiters, and employee advocacy programs.",
+    "shortDescription": "LinkedIn strategy, content and account operations",
+    "longDescription": "Audit, plan, write, review, publish, and manage LinkedIn work with manual, browser-assisted, or official API modes, reusable voice memory, approval gates, a local action queue, and focused workflows for creators, founders, sales teams, recruiters, and employee advocacy programs.",
     "developerName": "Vincenzo Picciuolo · HRN Innovation Technologies Ltd",
     "category": "Productivity",
-    "capabilities": ["Strategy", "Writing", "Analytics", "Local tools"],
+    "capabilities": ["Strategy", "Writing", "Live audits", "Account management", "Analytics", "Worker queue"],
     "websiteURL": "https://oyyo.one",
     "defaultPrompt": [
       "Set up my OYYO LinkedIn workspace.",
+      "Audit my current account and recent post times.",
       "Turn this idea into a LinkedIn post in my voice.",
-      "Analyze my LinkedIn content export."
+      "Configure automatic or official API mode."
     ],
     "brandColor": "#6D5EF7",
     "composerIcon": "./assets/icon.svg",

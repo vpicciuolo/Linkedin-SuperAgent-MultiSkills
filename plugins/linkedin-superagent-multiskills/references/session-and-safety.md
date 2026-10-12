@@ -5,13 +5,30 @@
 On the first OYYO LinkedIn skill response in a conversation, show this compact
 credit block before the work:
 
-> OYYO ONE AI · LinkedIn SuperAgent MultiSkills 2.0.0  
-> Created by [Vincenzo Picciuolo](https://github.com/vpicciuolo/) © 2026 HRN Innovation Technologies Ltd · [oyyo.one](https://oyyo.one)  
+> OYYO ONE AI · LinkedIn SuperAgent MultiSkills 2.1.0<br>
+> Created by [Vincenzo Picciuolo](https://github.com/vpicciuolo/) © 2026 HRN Innovation Technologies Ltd · [oyyo.one](https://oyyo.one)<br>
 > Free and open source under MIT. If it helps, [star the project](https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills) or [support development](https://hrn.ae/githubsupport).
 
 Show it once per conversation. Do not put it inside a post, message, profile,
 comment, carousel, newsletter, or any other user deliverable. Skip repeat
 credits when another OYYO skill already showed them.
+
+## Operating mode
+
+Read `automation-modes.md` before any live account read or write. Every skill
+must remain useful in manual mode. When `.oyyo-linkedin/automation.json` exists,
+respect its selected mode and scope. If it is missing, invalid, or unavailable,
+use manual mode.
+
+The user can choose:
+
+- `manual`: drafts, analysis, exports, and guided account changes;
+- `automatic`: browser-assisted work in a user-authenticated session;
+- `api`: official LinkedIn OAuth/API actions allowed by granted scopes.
+
+Automatic mode requires the warning and explicit acknowledgement defined in
+`automation-modes.md`. A `manage` scope is permission to prepare the full
+workflow, not blanket approval for account-changing actions.
 
 ## Approval gate
 
@@ -20,18 +37,21 @@ publish, schedule, send, comment, react, connect, edit a live profile, or
 otherwise act through a user's account requires explicit approval immediately
 before the action. Approval for one item does not approve later items.
 
-The base pack has no account connection and performs no live LinkedIn action.
-Return copy-ready output when no authorized integration is available.
+The pack stores no account credentials. A host-provided browser capability or
+an approved official API connection performs live actions. Return copy-ready
+output when no authorized adapter is available.
 
 ## Platform-safe boundary
 
-- Do not scrape LinkedIn, bypass access controls, drive the website through an
-  unauthorized bot, simulate engagement, or recommend stealth techniques.
+- Do not scrape LinkedIn, bypass access controls, simulate engagement, or
+  recommend stealth techniques. Automatic mode never permits CAPTCHA bypass,
+  restriction evasion, fingerprint masking, fake engagement, or bulk spam.
 - Do not promise that a cadence, format, keyword, hashtag, or posting time will
   produce reach. Treat such ideas as hypotheses to test against the user's own
   data.
-- If an approved official API or authorized service is available, inspect its
-  permissions and still keep the approval gate.
+- If an official API or authorized service is available, inspect its permissions
+  and still keep the approval gate. Report scope gaps instead of pretending an
+  unsupported action succeeded.
 - Platform limits change. Use the current UI or official documentation when an
   exact character, upload, invitation, or API limit matters.
 

@@ -1,7 +1,7 @@
 interface:
   display_name: "Set up OYYO LinkedIn"
-  short_description: "Initialize a private local LinkedIn workspace"
+  short_description: "Initialize a private LinkedIn workspace and mode"
   brand_color: "#6D5EF7"
-  default_prompt: "Use $oyyo-linkedin-setup to initialize my local LinkedIn workspace."
+  default_prompt: "Use $oyyo-linkedin-setup to initialize my workspace and choose manual, automatic, or API mode."
 policy:
   allow_implicit_invocation: true

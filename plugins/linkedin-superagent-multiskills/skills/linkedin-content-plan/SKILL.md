@@ -3,7 +3,7 @@ name: linkedin-content-plan
 description: Build a practical LinkedIn content calendar from the user's strategy, proof, and capacity. Use for a weekly or monthly plan, posting schedule, content mix, campaign calendar, or when the user asks what to post next.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

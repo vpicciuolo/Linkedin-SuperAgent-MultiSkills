@@ -34,32 +34,42 @@ The rebuild addresses these gaps:
    experiments.
 9. Installation drift. A single marketplace format does not cover the current
    ecosystem. OYYO ships portable, Codex, Claude Code, and manual skill paths.
+10. No mode contract. "Automation" often mixes drafting, browser control, and
+    API publishing. OYYO names manual, automatic, and API modes, then reports
+    the capabilities and limits of each.
+11. No durable execution state. A conversational agent can confuse a prepared
+    action with a completed one. OYYO adds a scoped queue, approvals, and final
+    receipts.
 
 ## Market categories
 
 | Category | Strength | Common weakness | OYYO choice |
 | --- | --- | --- | --- |
 | Writing-first skill packs | Fast, cheap, easy to inspect | Generic voice, prompt duplication, little measurement | Focused skills plus shared voice, evidence, and state |
-| Browser-control agents | Can act on a live account | Account-policy, privacy, and maintenance risk | No unauthorized browser automation |
-| API publishing agents | Reliable structured actions | OAuth setup, approval scope, platform access | Optional future integration, separate from the base pack |
+| Browser-control agents | Can act on a live account | Account-policy, privacy, and maintenance risk | Explicit opt-in automatic mode, risk warning, direct user sign-in, and no bypass features |
+| API publishing agents | Reliable structured actions | OAuth setup, restricted read access, incomplete profile surface | Official API mode that reports actual products and scopes |
 | Schedulers and SaaS tools | Team workflows and calendars | Account connection, recurring cost, data leaves device | Local-first core with export-based analytics |
 | Humanizers and AI detectors | Easy editorial pass | Semantic damage or misleading detector claims | Humanizer for prose; transparent local lint only |
 | General social agents | Broad channel coverage | Shallow LinkedIn-specific reasoning | LinkedIn-focused skills with cross-agent packaging |
 
 ## Feature priorities
 
-The highest-value capabilities are not more autonomous clicking. They are
-better source material, verified claims, a durable voice profile, a connected
-strategy, clear approval boundaries, and a measurement loop that can admit
-uncertainty. Those choices make the pack useful to individuals and teams while
-keeping the default install free of credentials and external services.
+The highest priorities are reliable mode detection, current-account audits,
+worker receipts, strong copy, and honest capability reporting. Broad account
+management is available only where the chosen browser or API adapter supports
+it. The project does not call a draft "published" or an API scope "full access."
+Manual mode keeps the default install useful without credentials or external
+services.
 
 ## Current platform facts used in the design
 
-- LinkedIn prohibits unauthorized bots, scraping, and automated engagement:
-  https://www.linkedin.com/legal/user-agreement
+- LinkedIn says third-party browser automation and scraping are not permitted:
+  https://www.linkedin.com/help/linkedin/answer/a1340567/automated-activity-on-linkedin
 - LinkedIn's official APIs include member posting through `w_member_social`:
   https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access
+- LinkedIn's member social read permissions can be restricted, and the available
+  actions depend on approved products and scopes:
+  https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api
 - Document upload limits and supported formats can change and should be checked
   before production:
   https://www.linkedin.com/help/linkedin/answer/a564109/media-file-types-supported-on-linkedin

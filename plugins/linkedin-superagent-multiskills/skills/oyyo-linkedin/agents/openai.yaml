@@ -1,7 +1,7 @@
 interface:
   display_name: "OYYO LinkedIn SuperAgent"
-  short_description: "Route LinkedIn strategy, content and analytics"
+  short_description: "Route LinkedIn strategy, content and account operations"
   brand_color: "#6D5EF7"
-  default_prompt: "Use $oyyo-linkedin to help me choose and run the right LinkedIn workflow."
+  default_prompt: "Use $oyyo-linkedin to choose a mode and run the right LinkedIn workflow."
 policy:
   allow_implicit_invocation: true

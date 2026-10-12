@@ -64,12 +64,12 @@ class AnalyticsTests(unittest.TestCase):
         with path.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(
                 handle,
-                fieldnames=["Post title", "Views", "Likes", "Comments", "Shares", "Format", "Pillar"],
+                fieldnames=["Post title", "Date", "Views", "Likes", "Comments", "Shares", "Format", "Pillar"],
             )
             writer.writeheader()
-            writer.writerow({"Post title": "A", "Views": "1,000", "Likes": "40", "Comments": "10", "Shares": "5", "Format": "Text", "Pillar": "Proof"})
-            writer.writerow({"Post title": "B", "Views": "500", "Likes": "10", "Comments": "20", "Shares": "0", "Format": "Text", "Pillar": "Opinion"})
-            writer.writerow({"Post title": "C", "Views": "", "Likes": "1", "Comments": "1", "Shares": "0", "Format": "Video", "Pillar": "Proof"})
+            writer.writerow({"Post title": "A", "Date": "2026-10-05T09:00:00+04:00", "Views": "1,000", "Likes": "40", "Comments": "10", "Shares": "5", "Format": "Text", "Pillar": "Proof"})
+            writer.writerow({"Post title": "B", "Date": "2026-10-06T18:00:00+04:00", "Views": "500", "Likes": "10", "Comments": "20", "Shares": "0", "Format": "Text", "Pillar": "Opinion"})
+            writer.writerow({"Post title": "C", "Date": "2026-10-07T09:00:00+04:00", "Views": "", "Likes": "1", "Comments": "1", "Shares": "0", "Format": "Video", "Pillar": "Proof"})
         return path
 
     def test_aliases_rates_and_missing_rows(self) -> None:
@@ -79,6 +79,13 @@ class AnalyticsTests(unittest.TestCase):
         self.assertEqual(report["summary"]["valid_impression_rows"], 2)
         self.assertEqual(report["summary"]["excluded_rows"], [3])
         self.assertEqual(report["rankings"]["engagement_rate"][0]["title"], "B")
+        self.assertEqual(report["summary"]["parsed_timestamps"], 3)
+        self.assertIn("9", report["timing"]["hour"])
+
+    def test_timezone_conversion(self) -> None:
+        with tempfile.TemporaryDirectory(dir=TEST_TEMP_ROOT) as directory:
+            report = oyyo.analyze_csv(self.write_csv(directory), timezone_name="UTC")
+        self.assertIn("5", report["timing"]["hour"])
 
     def test_missing_impressions_header_is_an_error(self) -> None:
         with tempfile.TemporaryDirectory(dir=TEST_TEMP_ROOT) as directory:

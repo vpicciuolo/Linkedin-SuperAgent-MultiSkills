@@ -20,10 +20,12 @@ import sys
 import unicodedata
 from collections import defaultdict
 from dataclasses import asdict, dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-VERSION = "2.0.0"
+VERSION = "2.1.0"
 COPYRIGHT = "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 PROJECT_URL = "https://github.com/vpicciuolo/Linkedin-SuperAgent-MultiSkills"
 SUPPORT_URL = "https://hrn.ae/githubsupport"
@@ -38,6 +40,8 @@ TEMPLATE_FILES = (
     "calendar.md",
     "content-log.csv",
     "evidence-ledger.csv",
+    "automation.json",
+    "account-snapshot.json",
 )
 
 
@@ -269,6 +273,42 @@ def parse_number(value: Any) -> float | None:
     return -number if negative else number
 
 
+def parse_datetime(value: Any, timezone_name: str | None = None) -> datetime | None:
+    raw = str(value or "").strip()
+    if not raw:
+        return None
+    candidate = raw[:-1] + "+00:00" if raw.endswith("Z") else raw
+    parsed: datetime | None = None
+    try:
+        parsed = datetime.fromisoformat(candidate)
+    except ValueError:
+        for pattern in (
+            "%Y-%m-%d %H:%M:%S",
+            "%Y-%m-%d %H:%M",
+            "%Y/%m/%d %H:%M",
+            "%m/%d/%Y %H:%M",
+            "%d/%m/%Y %H:%M",
+            "%Y-%m-%d",
+        ):
+            try:
+                parsed = datetime.strptime(raw, pattern)
+                break
+            except ValueError:
+                continue
+    if parsed is None:
+        return None
+    if timezone_name:
+        try:
+            zone = ZoneInfo(timezone_name)
+        except ZoneInfoNotFoundError as exc:
+            raise ValueError(f"unknown timezone: {timezone_name}") from exc
+        if parsed.tzinfo is not None:
+            parsed = parsed.astimezone(zone)
+        else:
+            parsed = parsed.replace(tzinfo=zone)
+    return parsed
+
+
 def safe_rate(numerator: float | None, denominator: float | None) -> float | None:
     if numerator is None or denominator is None or denominator <= 0:
         return None
@@ -280,7 +320,11 @@ def median(values: Iterable[float | None]) -> float | None:
     return statistics.median(present) if present else None
 
 
-def analyze_csv(path: Path, follower_override: float | None = None) -> dict[str, Any]:
+def analyze_csv(
+    path: Path,
+    follower_override: float | None = None,
+    timezone_name: str | None = None,
+) -> dict[str, Any]:
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         reader = csv.DictReader(handle)
         if not reader.fieldnames:
@@ -311,6 +355,10 @@ def analyze_csv(path: Path, follower_override: float | None = None) -> dict[str,
         row["reach_multiple"] = safe_rate(impressions, followers)
         row["follow_conversion"] = safe_rate(row.get("follows"), row.get("profile_views"))
         row["lead_rate"] = safe_rate(row.get("leads"), impressions)
+        published = parse_datetime(row.get("date"), timezone_name=timezone_name)
+        if published is not None:
+            row["published_weekday"] = published.strftime("%A")
+            row["published_hour"] = published.hour
         rows.append(row)
 
     valid = [row for row in rows if row.get("impressions") is not None and row["impressions"] > 0]
@@ -331,6 +379,8 @@ def analyze_csv(path: Path, follower_override: float | None = None) -> dict[str,
         "excluded_rows": excluded,
         "recognized_columns": sorted(header_map),
         "median_impressions": median(row.get("impressions") for row in valid),
+        "timezone": timezone_name or "as supplied",
+        "parsed_timestamps": sum("published_hour" in row for row in rows),
     }
     for field in rate_fields:
         summary[f"median_{field}"] = median(row.get(field) for row in valid)
@@ -370,7 +420,33 @@ def analyze_csv(path: Path, follower_override: float | None = None) -> dict[str,
             for label, items in sorted(buckets.items())
         }
 
-    return {"summary": summary, "rankings": rankings, "groups": groups, "rows": rows}
+    timing: dict[str, dict[str, dict[str, Any]]] = {}
+    timing_dimensions = (("weekday", "published_weekday"), ("hour", "published_hour"))
+    for label, field in timing_dimensions:
+        buckets: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        for row in valid:
+            if field not in row:
+                continue
+            bucket = str(row[field])
+            buckets[bucket].append(row)
+        if buckets:
+            timing[label] = {
+                bucket: {
+                    "n": len(items),
+                    "median_impressions": median(item.get("impressions") for item in items),
+                    "median_engagement_rate": median(item.get("engagement_rate") for item in items),
+                    "median_conversation_rate": median(item.get("conversation_rate") for item in items),
+                }
+                for bucket, items in buckets.items()
+            }
+
+    return {
+        "summary": summary,
+        "rankings": rankings,
+        "groups": groups,
+        "timing": timing,
+        "rows": rows,
+    }
 
 
 def format_rate(value: float | None) -> str:
@@ -406,6 +482,26 @@ def render_analytics(report: dict[str, Any]) -> str:
                 f"{label}: n={values['n']}, median engagement "
                 f"{format_rate(values['median_engagement_rate'])}{caveat}"
             )
+
+    if report.get("timing"):
+        lines.extend(("", f"ACTUAL POST TIMES ({summary['timezone']})"))
+        for dimension, buckets in report["timing"].items():
+            lines.append(dimension.upper())
+            ordered = sorted(
+                buckets.items(),
+                key=lambda item: (
+                    item[1]["median_engagement_rate"] is not None,
+                    item[1]["median_engagement_rate"] or -1,
+                ),
+                reverse=True,
+            )
+            for label, values in ordered:
+                display = f"{int(label):02d}:00" if dimension == "hour" else label
+                caveat = " (small sample)" if values["n"] < 3 else ""
+                lines.append(
+                    f"{display}: n={values['n']}, median engagement "
+                    f"{format_rate(values['median_engagement_rate'])}{caveat}"
+                )
 
     lines.extend(("", "Treat patterns as hypotheses; observational results do not prove causation."))
     return "\n".join(lines)
@@ -446,6 +542,7 @@ def build_parser() -> argparse.ArgumentParser:
     analytics_parser = sub.add_parser("analytics", help="analyze a LinkedIn content CSV export")
     analytics_parser.add_argument("csv_file", type=Path)
     analytics_parser.add_argument("--followers", type=float)
+    analytics_parser.add_argument("--timezone", help="IANA timezone, for example Asia/Dubai")
     analytics_parser.add_argument("--json", action="store_true")
     return parser
 
@@ -487,7 +584,11 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "analytics":
         try:
-            result = analyze_csv(args.csv_file, follower_override=args.followers)
+            result = analyze_csv(
+                args.csv_file,
+                follower_override=args.followers,
+                timezone_name=args.timezone,
+            )
         except (OSError, ValueError, csv.Error) as exc:
             print(f"error: {exc}", file=sys.stderr)
             return 2

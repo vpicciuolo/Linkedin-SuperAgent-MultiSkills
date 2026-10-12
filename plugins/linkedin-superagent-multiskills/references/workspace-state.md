@@ -15,10 +15,18 @@ only when the user asks to save, initialize, log, or maintain it.
 | `calendar.md` | current content plan |
 | `content-log.csv` | published content and later performance |
 | `evidence-ledger.csv` | externally sourced claims used in drafts |
+| `automation.json` | selected manual, automatic, or API mode and its scope; never credentials |
+| `account-snapshot.json` | optional user-approved snapshot of current profile and recent activity |
+| `action-queue.json` | worker actions and approval state, created on first queued action |
+| `action-receipts.jsonl` | append-only completion receipts without tokens or browser state |
 
 Never silently overwrite user edits. Merge new observations, preserve a dated
 note for disputed guidance, and ask before replacing a declared position or
 off-limits topic.
+
+Never store passwords, access tokens, refresh tokens, cookies, one-time codes,
+recovery codes, or browser storage in these files. Environment variables and
+host secret stores are the only supported token locations.
 
 `content-log.csv` uses these columns:
 

@@ -3,7 +3,7 @@ name: linkedin-voice-lab
 description: Build or update a reusable writing voice profile from the user's real samples. Use when the user wants content in their voice, says drafts sound generic, or provides past posts for style learning.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

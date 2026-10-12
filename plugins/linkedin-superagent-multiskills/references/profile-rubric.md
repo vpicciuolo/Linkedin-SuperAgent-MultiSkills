@@ -10,7 +10,7 @@ rather than zero. Normalize the final score over reviewed points.
 | Top-card coherence | 8 | Photo, banner, headline, location, and CTA tell one consistent story. |
 | About opening | 10 | The visible opening tells the intended reader why to continue. |
 | About body | 12 | It combines relevance, method, proof, personality, and a natural next step. |
-| Experience | 10 | Current work has scope and verified outcomes, not only duties. |
+| Experience | 10 | Current work includes scope, duties, and verified outcomes. |
 | Featured | 8 | Items provide proof, depth, and a useful next action. |
 | Proof | 8 | Claims have examples, numbers, artifacts, recommendations, or credentials. |
 | Search clarity | 6 | Role and domain terms appear naturally where relevant. |

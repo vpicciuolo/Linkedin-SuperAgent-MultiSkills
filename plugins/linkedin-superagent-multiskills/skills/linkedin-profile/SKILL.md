@@ -3,7 +3,7 @@ name: linkedin-profile
 description: Audit or rewrite a LinkedIn profile for positioning, trust, search clarity, and conversion. Use for headline, About, Experience, Featured, banner, top card, profile score, creator positioning, job search, founder, consultant, or executive profiles.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 

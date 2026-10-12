@@ -1,5 +1,49 @@
 # Prompt cookbook
 
+## Choose a mode
+
+```text
+Use linkedin-automation-setup. Configure manual mode with manage scope and show me how approvals work.
+```
+
+```text
+Use linkedin-automation-setup. I want automatic mode. Show the LinkedIn warning first, then connect only after I accept it.
+```
+
+```text
+Use linkedin-automation-setup. Inspect my official LinkedIn API products and scopes. Configure API mode without asking me to paste a token into chat.
+```
+
+## Run the worker
+
+```text
+Use linkedin-worker. Audit my account, prepare profile improvements, plan five posts, and queue meaningful comment replies. Read-only work can start now; ask before every live change.
+```
+
+```text
+Use linkedin-worker. Show completed actions, pending approvals, failed actions, and the next best task. Do not repeat completed work.
+```
+
+## Audit the current account
+
+```text
+Use linkedin-live-audit. Review my profile, last 30 posts, actual local posting times, formats, topics, unanswered comments, notifications, and available analytics. Separate findings from guesses.
+```
+
+```text
+Use linkedin-live-audit in manual mode. Tell me exactly which export, screenshots, and profile sections you need, then analyze what I provide without waiting for everything.
+```
+
+## Manage the account
+
+```text
+Use linkedin-account-manager. Build a change set for my headline, About, Featured, Experience, and skills. Show current versus proposed text and ask before each live edit.
+```
+
+```text
+Use linkedin-account-manager. Triage my company page, current posts, comments, and inbox in the selected mode. Never send, delete, or publish without showing the exact action first.
+```
+
 ## Foundation
 
 ```text

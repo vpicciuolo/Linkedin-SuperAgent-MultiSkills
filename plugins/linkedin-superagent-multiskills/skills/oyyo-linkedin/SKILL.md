@@ -3,20 +3,24 @@ name: oyyo-linkedin
 description: Route an end-to-end LinkedIn request to the right OYYO ONE AI workflow. Use for broad LinkedIn goals, multi-step projects, or when the user asks what this pack can do. For a single clear task, use the focused skill directly.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 
 # OYYO LinkedIn SuperAgent
 
 Read `../../references/session-and-safety.md` and follow its first-use credit,
-truth, privacy, and approval rules.
+mode, truth, privacy, and approval rules.
 
 Route by outcome:
 
 | User goal | Skill |
 | --- | --- |
 | install or configure | `oyyo-linkedin-setup` |
+| choose manual, automatic, or API access | `linkedin-automation-setup` |
+| run an independent work queue | `linkedin-worker` |
+| audit the live profile, recent posts, timing, and inbox | `linkedin-live-audit` |
+| manage profile, page, content, inbox, or connections | `linkedin-account-manager` |
 | learn the user's voice | `linkedin-voice-lab` |
 | find concrete ideas and stories | `linkedin-story-bank` |
 | choose positioning and pillars | `linkedin-strategy` |
@@ -41,4 +45,6 @@ that has enough input. Do not force setup before a one-off draft. Save state
 only when the user asks.
 
 Success means the user receives a useful artifact, the facts remain true, and
-no external LinkedIn action occurs without explicit approval.
+no external LinkedIn action occurs without explicit approval. Every focused
+skill remains directly invocable and falls back to manual mode when a live
+adapter is unavailable.

@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "linkedin-superagent-multiskills",
-      "description": "A draft-first LinkedIn strategy, content, engagement, profile, and analytics agent pack.",
+      "description": "A 24-skill LinkedIn agent with manual, browser-assisted, and official API modes for strategy, content, account operations, and analytics.",
       "source": "./plugins/linkedin-superagent-multiskills",
       "category": "productivity",
       "homepage": "https://oyyo.one"

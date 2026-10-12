@@ -3,7 +3,7 @@ name: linkedin-repurposer
 description: Turn an existing article, transcript, podcast, video, newsletter, webinar, report, or post into distinct LinkedIn-native assets. Use when the user asks to repurpose, atomize, adapt, or build a content series from source material.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   copyright: "VINCENZO PICCIUOLO (C) 2026 HRN INNOVATION TECHNOLOGIES LTD"
 ---
 
